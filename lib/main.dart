@@ -42,10 +42,33 @@ class MyHomePage extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => context.read<CounterNotifier>().increment(),
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
+      floatingActionButton: Container(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            FloatingActionButton(
+              onPressed: () => context.read<CounterNotifier>().increment(),
+              tooltip: 'Increment',
+              child: Icon(Icons.add),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            FloatingActionButton(
+              onPressed: () => context.read<CounterNotifier>().decrement(),
+              tooltip: 'Decrement',
+              child: Icon(Icons.remove),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            FloatingActionButton(
+              onPressed: () => context.read<CounterNotifier>().reset(),
+              tooltip: 'Reset',
+              child: Icon(Icons.refresh),
+            ),
+          ],
+        ),
       ),
     );
   }

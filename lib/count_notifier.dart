@@ -11,6 +11,16 @@ class CounterNotifier with ChangeNotifier, DiagnosticableTreeMixin {
     notifyListeners();
   }
 
+  void decrement() {
+    _count--;
+    notifyListeners();
+  }
+
+  void reset() {
+    _count = 0;
+    notifyListeners();
+  }
+
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
