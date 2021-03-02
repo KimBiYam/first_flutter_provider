@@ -13,9 +13,7 @@ class SecondScreen extends StatelessWidget {
         title: Text('First Screen'),
       ),
       body: Consumer<CounterProvider>(
-        builder: (BuildContext context, CounterProvider counterProvider,
-                Widget child) =>
-            Center(
+        builder: (context, value, child) => Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -23,7 +21,7 @@ class SecondScreen extends StatelessWidget {
                 'You have pushed the button this many times:',
               ),
               Text(
-                '${counterProvider.count}',
+                '${value.count}',
                 style: Theme.of(context).textTheme.headline4,
               ),
             ],
