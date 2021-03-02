@@ -1,4 +1,4 @@
-import 'package:first_flutter_provider/notifiers/count_notifier.dart';
+import 'package:first_flutter_provider/providers/counter_provider.dart';
 import 'package:first_flutter_provider/screens/first_screen.dart';
 import 'package:first_flutter_provider/screens/second_screen.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: [ChangeNotifierProvider(create: (_) => CounterNotifier())],
+      providers: [ChangeNotifierProvider(create: (_) => CounterProvider())],
       child: MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(

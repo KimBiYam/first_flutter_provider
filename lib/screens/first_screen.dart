@@ -1,4 +1,4 @@
-import 'package:first_flutter_provider/notifiers/count_notifier.dart';
+import 'package:first_flutter_provider/providers/counter_provider.dart';
 import 'package:first_flutter_provider/screens/second_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -26,7 +26,7 @@ class _FirstScreenState extends State<FirstScreen> {
               'You have pushed the button this many times:',
             ),
             Text(
-              '${context.watch<CounterNotifier>().count}',
+              '${context.watch<CounterProvider>().count}',
               style: Theme.of(context).textTheme.headline4,
             ),
             RaisedButton(
@@ -42,7 +42,7 @@ class _FirstScreenState extends State<FirstScreen> {
           children: [
             FloatingActionButton(
               heroTag: 'Increment',
-              onPressed: () => context.read<CounterNotifier>().increment(),
+              onPressed: () => context.read<CounterProvider>().increment(),
               tooltip: 'Increment',
               child: Icon(Icons.add),
             ),
@@ -51,7 +51,7 @@ class _FirstScreenState extends State<FirstScreen> {
             ),
             FloatingActionButton(
               heroTag: 'Decrement',
-              onPressed: () => context.read<CounterNotifier>().decrement(),
+              onPressed: () => context.read<CounterProvider>().decrement(),
               tooltip: 'Decrement',
               child: Icon(Icons.remove),
             ),
@@ -60,7 +60,7 @@ class _FirstScreenState extends State<FirstScreen> {
             ),
             FloatingActionButton(
               heroTag: 'Reset',
-              onPressed: () => context.read<CounterNotifier>().reset(),
+              onPressed: () => context.read<CounterProvider>().reset(),
               tooltip: 'Reset',
               child: Icon(Icons.refresh),
             ),

@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 
-class CounterNotifier with ChangeNotifier, DiagnosticableTreeMixin {
+class CounterProvider with ChangeNotifier, DiagnosticableTreeMixin {
   int _count = 0;
 
   int get count => _count;
