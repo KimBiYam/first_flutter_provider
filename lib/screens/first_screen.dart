@@ -32,7 +32,7 @@ class _FirstScreenState extends State<FirstScreen> {
                 '${counterProvider.count}',
                 style: Theme.of(context).textTheme.headline4,
               ),
-              RaisedButton(
+              ElevatedButton(
                 onPressed: () =>
                     Navigator.of(context).pushNamed(SecondScreen.id),
                 child: Text('Second Screen'),
