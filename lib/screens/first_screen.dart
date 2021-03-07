@@ -16,7 +16,7 @@ class _FirstScreenState extends State<FirstScreen> {
   Widget build(BuildContext context) {
     return Consumer<CounterProvider>(
       builder: (BuildContext context, CounterProvider counterProvider,
-              Widget child) =>
+              Widget? child) =>
           Scaffold(
         appBar: AppBar(
           title: Text('First Screen'),
