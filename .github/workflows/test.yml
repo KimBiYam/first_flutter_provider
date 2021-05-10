@@ -14,16 +14,15 @@ jobs:
         os: [ubuntu-18.04, windows-2019, macos-10.15]
     steps:
       # Set up Flutter.
+      - name: Setup java version
+      - uses: actions/setup-java@v1
+        with:
+          java-version: '12.x'
       - name: Clone Flutter repository with master channel
         uses: subosito/flutter-action@v1.5.0
         with:
           channel: stable
       - run: flutter doctor -v
-
-      - name: Setup java version
-      - uses: actions/setup-java@v1
-        with:
-          java-version: '12.x'
 
       - name: Get pub packages
         uses: actions/checkout@v2
